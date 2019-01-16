@@ -1,4 +1,56 @@
 <html>
+  <head>
+    <style>
+      #food1 {
+        background-color:red;
+        width:300px;
+        height:300px;
+        margin:10px;
+        float:left;
+      }
+      
+      #food2 {
+        background-color:red;
+        width:300px;
+        height:300px;
+        margin:10px;
+        float:left;
+      }
+      
+      #food3 {
+        background-color:red;
+        width:300px;
+        height:300px;
+        margin:10px;
+        float:left;
+      }
+      
+      #food4 {
+        background-color:red;
+        width:300px;
+        height:300px;
+        margin:10px;
+        float:left;
+      }
+      
+      #food5 {
+        background-color:red;
+        width:300px;
+        height:300px;
+        margin:10px;
+        float:left;
+      }
+      
+      #food6 {
+        background-color:red;
+        width:300px;
+        height:300px;
+        margin:10px;
+        float:left;
+      }
+      
+    </style>
+  </head>
   <body>
     
     <script>
@@ -7,10 +59,10 @@
   xmlhttp.onreadystatechange = function() {
     if(this.readyState == 4 && this.status == 200) {
       var mydata = JSON.parse(this.responseText);
-      window.alert(mydata.food[4].name);
+      window.alert(mydata.name);
     }
   };
-  xmlhttp.open("Get","bento.json",true);
+  xmlhttp.open("Get","sample.json",true);
   xmlhttp.send();
     </script>
     
