@@ -21,6 +21,51 @@
           "caviar",
           "mac salad"
           ]
+      },
+    {
+        "name": "Teriyaki Steak",
+        "price":10,
+        "quantity":6,
+        "sides":[
+          "rice",
+          "ginger",
+          "caviar",
+          "mac salad"
+          ]
+      },
+    {
+        "name": "Spring Rolls",
+        "price":2.50,
+        "quantity":2,
+        "sides":[
+          "rice",
+          "ginger",
+          "caviar",
+          "mac salad"
+          ]
+      },
+    {
+        "name": "Yakitori",
+        "price":5,
+        "quantity":3,
+        "sides":[
+          "rice",
+          "ginger",
+          "caviar",
+          "mac salad"
+          ]
+      },
+    {
+        "name": "Sushi",
+        "price":6,
+        "quantity":3,
+        "sides":[
+          "rice",
+          "ginger",
+          "caviar",
+          "mac salad",
+          "wasabi"
+          ]
       }
     ]
 }
