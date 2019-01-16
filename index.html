@@ -59,10 +59,10 @@
   xmlhttp.onreadystatechange = function() {
     if(this.readyState == 4 && this.status == 200) {
       var mydata = JSON.parse(this.responseText);
-      window.alert(mydata.name);
+      window.alert(mydata.food[4].name);
     }
   };
-  xmlhttp.open("Get","sample.json",true);
+  xmlhttp.open("Get","bento.json",true);
   xmlhttp.send();
     </script>
     
