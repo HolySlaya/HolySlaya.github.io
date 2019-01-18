@@ -14,7 +14,7 @@
     {
         "name": "medium crab",
         "price":9,
-        "kilos":0.25,
+        "quantity":1,
         "sides":[
           "rice",
           "ginger",
