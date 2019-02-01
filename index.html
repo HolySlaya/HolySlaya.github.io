@@ -135,7 +135,7 @@
       var add = document.getElementById('quantity').value;
       document.getElementById('quantity').value = "";
       var newList = document.createElement('li');
-      var newText = document.createTextNode(add + f1name);
+      var newText = document.createTextNode(add +  " " +f1name);
       newList.appendChild(newText);
       var position = document.getElementsByTagName('ol')[0];
       position.appendChild(newList);
