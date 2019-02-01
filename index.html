@@ -118,12 +118,6 @@
     var total = 0;
   
     function shop(){
-      if (shop:true) {
-        var tax = 1.04712;
-        var total= mydata.food[0].price * tax;
-        document.getElementById('total').innerHTML = "Total $" + total.toFixed(2);
-      }
-      
       var add = document.getElementById('quantity').value;
       document.getElementById('quantity').value = "";
       var newList = document.createElement('li');
@@ -135,12 +129,6 @@
     }
     
     function shop2(){
-      if (shop:true) {
-        var tax = 1.04712;
-        var total= mydata.food[0].price * tax;
-        document.getElementById('total').innerHTML = "Total $" + total.toFixed(2);
-      }
-      
       var add = document.getElementById('quantity2').value;
       document.getElementById('quantity2').value = "";
       var newList = document.createElement('li');
