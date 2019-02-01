@@ -156,7 +156,7 @@
       var add = document.getElementById('quantity2').value;
       document.getElementById('quantity2').value = "";
       var newList = document.createElement('li');
-      var newText = document.createTextNode(add);
+      var newText = document.createTextNode(add + " " + f2name);
       newList.appendChild(newText);
       var position = document.getElementsByTagName('ol')[0];
       position.appendChild(newList);
