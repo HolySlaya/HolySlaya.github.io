@@ -79,29 +79,29 @@
     <div id="TeriyakiSteak">
       <h1>Teriyaki Steak</h1>
       <h2>$10</h2>
-      <input type="number" id="quantity">
-      <button onclick="shop()">Buy</button>
+      <input type="number" id="quantity3">
+      <button onclick="shop3()">Buy</button>
     </div>
     
     <div id="SpringRolls">
       <h1>Spring Rolls</h1>
       <h2>$2.50</h2>
-      <input type="number" id="quantity">
-      <button onclick="shop()">Buy</button>
+      <input type="number" id="quantity4">
+      <button onclick="shop4()">Buy</button>
     </div>
     
     <div id="Yakitori">
       <h1>Yakitori</h1>
       <h2>$5</h2>
-      <input type="number" id="quantity">
-      <button onclick="shop()">Buy</button>
+      <input type="number" id="quantity5">
+      <button onclick="shop5()">Buy</button>
     </div>
     
     <div id="Sushi">
       <h1>Sushi</h1>
       <h2>$6</h2>
-      <input type="number" id="quantity">
-      <button onclick="shop()">Buy</button>
+      <input type="number" id="quantity6">
+      <button onclick="shop6()">Buy</button>
     </div>
     
     <div id="Cart">
@@ -153,6 +153,49 @@
       Cart++;
     }
     
+    function shop3(){
+      var add = document.getElementById('quantity3').value;
+      document.getElementById('quantity3').value = "";
+      var newList = document.createElement('li');
+      var newText = document.createTextNode(add +  " " + f3name);
+      newList.appendChild(newText);
+      var position = document.getElementsByTagName('ol')[0];
+      position.appendChild(newList);
+      Cart++;
+    }
+    
+    function shop4(){
+      var add = document.getElementById('quantity4').value;
+      document.getElementById('quantity4').value = "";
+      var newList = document.createElement('li');
+      var newText = document.createTextNode(add +  " " + f4name);
+      newList.appendChild(newText);
+      var position = document.getElementsByTagName('ol')[0];
+      position.appendChild(newList);
+      Cart++;
+    }
+    
+    function shop5(){
+      var add = document.getElementById('quantity5').value;
+      document.getElementById('quantity5').value = "";
+      var newList = document.createElement('li');
+      var newText = document.createTextNode(add +  " " + f5name);
+      newList.appendChild(newText);
+      var position = document.getElementsByTagName('ol')[0];
+      position.appendChild(newList);
+      Cart++;
+    }
+    
+    function shop6(){
+      var add = document.getElementById('quantity6').value;
+      document.getElementById('quantity6').value = "";
+      var newList = document.createElement('li');
+      var newText = document.createTextNode(add + " " + f6name);
+      newList.appendChild(newText);
+      var position = document.getElementsByTagName('ol')[0];
+      position.appendChild(newList);
+      Cart++;
+    }
     setInternal(function(){
       document.getJSON("bento.json",function(json){
         current = JSON.stringify(json);
