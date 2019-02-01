@@ -2,7 +2,7 @@
   "food":[
       {
         "name": "soft shelled crab",
-        "price":32.67,
+        "price":15,
         "kilos":2,
         "sides":[
           "rice",
@@ -14,7 +14,7 @@
     {
         "name": "medium crab",
         "price":9,
-        "quantity":1,
+        "oz":7.5,
         "sides":[
           "rice",
           "ginger",
@@ -25,7 +25,7 @@
     {
         "name": "Teriyaki Steak",
         "price":10,
-        "quantity":6,
+        "oz":12,
         "sides":[
           "rice",
           "ginger",
