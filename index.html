@@ -72,8 +72,8 @@
     <div id="MediumCrab">
       <h1>Medium Crab</h1>
       <h2>$9</h2>
-      <input type="number" id="quantity">
-      <button onclick="shop()">Buy</button>
+      <input type="number" id="quantity2">
+      <button onclick="shop2()">Buy</button>
     </div>
     
     <div id="TeriyakiSteak">
@@ -133,6 +133,24 @@
       position.appendChild(newList);
       Cart++;
     }
+    
+    function shop2(){
+      if (shop:true) {
+        var tax = 1.04712;
+        var total= mydata.food[0].price * tax;
+        document.getElementById('total').innerHTML = "Total $" + total.toFixed(2);
+      }
+      
+      var add = document.getElementById('quantity2').value;
+      document.getElementById('quantity2').value = "";
+      var newList = document.createElement('li');
+      var newText = document.createTextNode(add);
+      newList.appendChild(newText);
+      var position = document.getElementsByTagName('ol')[0];
+      position.appendChild(newList);
+      Cart++;
+    }
+    
     
       var xmlhttp = new XMLHttpRequest();
     
