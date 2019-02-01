@@ -112,20 +112,34 @@
     </div>
     
     <script>
+    var xmlhttp = new XMLHttpRequest();
+    
+  xmlhttp.onreadystatechange = function() {
+    if(this.readyState == 4 && this.status == 200) {
+      var mydata = JSON.parse(this.responseText);
+      var f1name = mydata.food[0].name;
+      window.f1name=f1name;
+      
+    }
+  };
+  xmlhttp.open("Get","bento.json",true);
+  xmlhttp.send();
+  
     var previous = null;
     var current = null;
     var Cart = 0;
     var total = 0;
+    
   
     function shop(){
       var add = document.getElementById('quantity').value;
       document.getElementById('quantity').value = "";
       var newList = document.createElement('li');
-      var newText = document.createTextNode(add);
+      var newText = document.createTextNode(add + f1name);
       newList.appendChild(newText);
       var position = document.getElementsByTagName('ol')[0];
       position.appendChild(newList);
-      Cart++ + "Soft Shelled Crab" ;
+      Cart++;
     }
     
     function shop2(){
@@ -136,20 +150,8 @@
       newList.appendChild(newText);
       var position = document.getElementsByTagName('ol')[0];
       position.appendChild(newList);
-      Cart++ + "Medium Crab";
+      Cart++;
     }
-    
-    
-      var xmlhttp = new XMLHttpRequest();
-    
-  xmlhttp.onreadystatechange = function() {
-    if(this.readyState == 4 && this.status == 200) {
-      var mydata = JSON.parse(this.responseText);
-      window.alert(mydata.food[4].name);
-    }
-  };
-  xmlhttp.open("Get","bento.json",true);
-  xmlhttp.send();
     
     setInternal(function(){
       document.getJSON("bento.json",function(json){
