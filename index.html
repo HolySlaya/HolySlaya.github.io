@@ -112,26 +112,31 @@
     </div>
     
     <script>
-    var Cart = 0;
     var previous = null;
     var current = null;
+    var Cart = 0;
     var total = 0;
-    
-    function SSC(){
-      var tax = 1.04712;
-      var total= mydata.food[0].price * tax;
-      document.getElementById('total').innerHTML = "Total $" + total.toFixed(2);
+    var fn = [];
+    var fp = [];
       
-    }
     function shop(){
+      if (shop:true) {
+        var tax = 1.04712;
+        var total= mydata.food[0].price * tax;
+        document.getElementById('total').innerHTML = "Total $" + total.toFixed(2);
+      }
       var add = document.getElementById('quantity').value;
       document.getElementById('quantity').value = "";
       var newList = document.createElement('li');
-      var newText = document.createTextNode(add);
-      newList.appendChild(newText);
-      var position = document.getElementsByTagName('ol')[0];
-      position.appendChild(newList);
-      Cart++;
+      for (var = i = 0; i < mydata.food.length;i++){
+        fn.push(mydata.food[i].name);
+        fp.push(mydata.food[i].price);
+        document.createElement('li');
+        text.createTextNode(add);
+        newList.appendChild(newText);
+        var position = document.getElementsByTagName('ol')[0];
+        position.appendChild(newList);
+        Cart++;
     }
     
       var xmlhttp = new XMLHttpRequest();
