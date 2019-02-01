@@ -118,7 +118,17 @@
     if(this.readyState == 4 && this.status == 200) {
       var mydata = JSON.parse(this.responseText);
       var f1name = mydata.food[0].name;
+      var f2name = mydata.food[1].name;
+      var f3name = mydata.food[2].name;
+      var f4name = mydata.food[3].name;
+      var f5name = mydata.food[4].name;
+      var f6name = mydata.food[5].name;
       window.f1name=f1name;
+      window.f2name=f2name;
+      window.f3name=f3name;
+      window.f4name=f4name;
+      window.f5name=f5name;
+      window.f6name=f6name;
       
     }
   };
@@ -196,6 +206,7 @@
       position.appendChild(newList);
       Cart++;
     }
+    
     setInternal(function(){
       document.getJSON("bento.json",function(json){
         current = JSON.stringify(json);
