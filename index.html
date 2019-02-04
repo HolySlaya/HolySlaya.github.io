@@ -211,7 +211,7 @@
       }
     
     setInterval(function(){
-      document.getJSON("bento.json",function(json){
+      document.getJSON("bento.json",functionjson(){
         current = JSON.stringify(json);
         if(previous && current && previous !== current){
           location.reload();
