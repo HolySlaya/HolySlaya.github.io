@@ -210,7 +210,7 @@
         
       }
     
-    setInternal(function(){
+    setInterval(function(){
       document.getJSON("bento.json",function(json){
         current = JSON.stringify(json);
         if(previous && current && previous !== current){
