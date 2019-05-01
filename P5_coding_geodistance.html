@@ -9,12 +9,24 @@
     <p id="dist">Distance</p>
     <script>
       var distance;
+      WatchOptions = {
+        enableHighAccuracy: true;
+        timeout:2000;
+        maxiumAge:0
+        }
         
         function setup(){
-          
+          //distance between F building and Chipotle in Palm Desert,CA
           distance = calcGeoDistance(21.312059,-157.838468,33.728912,-116.407028, 'mi');
           document.getElementById('dist').innerHTML = distance.toFixed(5);
         }
+        
+        watchPosition(positionChanged)
+        function positionChanged() {
+          document.position.latitude;
+          document.position.longitude;
+        }
+        
     </script>
   </body>
 </html>
