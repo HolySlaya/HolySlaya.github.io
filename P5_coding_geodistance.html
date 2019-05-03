@@ -17,12 +17,12 @@
         
         function setup(){
           //distance between F building and Chipotle in Palm Desert,CA
+          watchPosition(positionChanged)
           distance = calcGeoDistance(21.312059,-157.838468,33.728912,-116.407028, 'mi');
           document.getElementById('dist').innerHTML = distance.toFixed(5);
         }
         
-        watchPosition(positionChanged)
-        function positionChanged() {
+        function positionChanged(position) {
           document.position.latitude;
           document.position.longitude;
         }
