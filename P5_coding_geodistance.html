@@ -6,25 +6,32 @@
   </head>
   
   <body>
-    <p id="dist">Distance</p>
+    <p id="dist"></p>
+    <p id="lat"></p>
+    <p id="lon"></p>
+
     <script>
       var distance;
-      WatchOptions = {
-        enableHighAccuracy: true;
-        timeout:2000;
-        maxiumAge:0
-        }
+      
         
         function setup(){
-          //distance between F building and Chipotle in Palm Desert,CA
-          watchPosition(positionChanged)
-          distance = calcGeoDistance(21.312059,-157.838468,33.728912,-116.407028, 'mi');
-          document.getElementById('dist').innerHTML = distance.toFixed(5);
+          intervalCurrentPosition(positionPing,5000);
+      
         }
         
-        function positionChanged(position) {
-          document.position.latitude;
-          document.position.longitude;
+        function positionPing(position) {
+          document.getElementById('lat').innerHTML = position.latitude;
+          document.getElementById('lon').innerHTML = position.longitude;
+          
+          distance = calcGeoDistance(21.312059,-157.838468,33.728912,-116.407028, 'mi');
+          document.getElementById('dist').innerHTML = distance.toFixed(5);
+          
+          if (distance < .1) {
+            document.body.style.backgroundColor = "red";
+          }
+          else {
+            document.body.style.backgroundColor = "blue";
+          }
         }
         
     </script>
