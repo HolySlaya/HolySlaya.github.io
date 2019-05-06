@@ -4,17 +4,31 @@
   </head>
   
   <body>
-    <h1 id="accel"></h1>
+    <h1 id="accel1"></h1>
+    <h1 id="accel2"></h1>
     <script>
-    var d;
+    var ax;
+    var ay;
+    var arrX = [];
+    var arrY = [];
     
       function setup() {
         createCanvas(window.innerWidth, window.innerHeight);
       }
       
       function draw() {
-        d = accelerationX;
-        document.getElementById('accel').innerHTML = d;
+        ax = accelerationX;
+        arrX.push[ax];
+        // a and b are parameters
+        arrX.sort(function(a,b){
+          // not minus it's b "to" a
+          return(b-a);
+          document.getElementById('accel1').innerHTML = ax;
+        })
+        
+        //ay = accelerationY;
+        //document.getElementById('accel2').innerHTML = ay;
+        
       }
       
     </script>
