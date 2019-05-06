@@ -19,7 +19,7 @@
       function draw() {
         ax = accelerationX;
         if (ax < Xhigh) {
-          ax = Xhigh
+          Xhigh = ax;
           document.getElementById('accel1').innerHTML = Xhigh;
         }
         //ay = accelerationY;
