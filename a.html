@@ -9,8 +9,8 @@
     <script>
     var ax;
     var ay;
-    var arrX = [];
-    var arrY = [];
+    var Xhigh = 0;
+    var Yhigh = 0;
     
       function setup() {
         createCanvas(window.innerWidth, window.innerHeight);
@@ -18,14 +18,10 @@
       
       function draw() {
         ax = accelerationX;
-        arrX.push[ax];
-        // a and b are parameters
-        arrX.sort(function(a,b){
-          // not minus it's b "to" a
-          return(b-a);
+        if (ax < Xhigh) {
+          ax = Xhigh
           document.getElementById('accel1').innerHTML = ax;
-        })
-        
+        }
         //ay = accelerationY;
         //document.getElementById('accel2').innerHTML = ay;
         
