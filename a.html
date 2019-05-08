@@ -4,8 +4,8 @@
   </head>
   
   <body>
-    <h1 id="accel1"></h1>
-    <h1 id="accel2"></h1>
+    <h1 id="accelx"></h1>
+    <h1 id="accely"></h1>
     <script>
     var ax;
     var ay;
@@ -14,17 +14,29 @@
     
       function setup() {
         createCanvas(window.innerWidth, window.innerHeight);
+        
       }
       
       function draw() {
         ax = accelerationX;
+        ay = accelerationY;
+        
         if (ax < Xhigh) {
           Xhigh = ax;
-          document.getElementById('accel1').innerHTML = Xhigh;
+          document.getElementById('accelx').innerHTML = "Your X acceleration is" + Xhigh;
         }
-        //ay = accelerationY;
-        //document.getElementById('accel2').innerHTML = ay;
         
+        if (ay < Yhigh) {
+          Yhigh = ay;
+          document.getElementById('accely').innerHTML = "Your Y acceleration is" + Yhigh;
+        }
+      }
+      
+      function deviceMoved() {
+        var r = Math.floor(Math.random() * 255);
+        var g = Math.floor(Math.random() * 255);
+        var b = Math.floor(Math.random() * 255);
+        background(r,g,b);
       }
       
     </script>
